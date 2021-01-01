@@ -3,6 +3,7 @@ import openpyxl
 import os
 
 def automation():
+    print('Start the automation...')
     original_path = os.path.join(os.getcwd(),'Summary_12-23-2020.xlsx')
     rates_path = os.path.join(os.getcwd(), 'Inputs_12-24-2020.xlsx')
 
