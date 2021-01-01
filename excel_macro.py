@@ -3,12 +3,15 @@ import openpyxl
 import os
 
 def automation():
-    print('Start the automation...1')
+    print('Start the automation...')
+
+    #Update the os.getcwd() to the dirctory where the excel (or CSV) is saved
     original_path = os.path.join(os.getcwd(),'Summary_12-23-2020.xlsx')
     rates_path = os.path.join(os.getcwd(), 'Inputs_12-24-2020.xlsx')
 
     #Creates a df - treasury rates
     df_rates = pd.read_excel(rates_path, sheet_name='Rates', engine='openpyxl', index_col=0)
+    #df_rates = pd.read_csv(rates_path)
 
     #Sets val_date
     #This is due to the way datetime values are stored in pandas: using the numpy datetime64[ns] dtype. 
